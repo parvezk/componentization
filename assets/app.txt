@@ -1,0 +1,52 @@
+import React, { Component } from 'react';
+import ReactDOM from "react-dom";
+import IncrementButton from './src/IncrementButton/'
+import Increment from './Increment/'
+
+class App extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+        }
+
+    }
+
+    static propTypes = { initialCount: React.PropTypes.number };
+    static defaultProps = { initialCount: 0 };
+
+    componentWillMount(){
+        console.log('before mount');
+    }
+
+    componentWillReceiveProps(){
+    }
+
+    handler (e) {
+        return "handler here";
+    }
+
+    newHandler = () => {
+
+    }
+
+    render() {
+        const hello = "world there";
+        return (
+            <div>
+                <h1>Hello World</h1>
+                <b>Bold</b>
+                {hello}
+                {this.handler()}
+                <Increment />
+
+            </div>
+        )
+    }
+}
+export default App;
+
+// Counter.propTypes = { initialCount: React.PropTypes.number };
+// Counter.defaultProps = { initialCount: 0 };
+
+ReactDOM.render(<App />, document.getElementById('root'));
