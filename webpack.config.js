@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        "App": "./App.js"
+        "app": "./src/app.js"
     },
     output: {
         libraryTarget: "umd", // enum
